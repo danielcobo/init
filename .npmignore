@@ -1,0 +1,9 @@
+*.test.js
+.*
+*.log
+*.md
+coverage
+reports
+stryker.conf.json
+README.hbs
+LICENSE.hbs
