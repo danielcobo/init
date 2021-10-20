@@ -1,0 +1,44 @@
+{
+ "name": "@danielcobo/init",
+ "version": "1.0.0",
+ "description": "A more complete npm init",
+ "main": "index.js",
+ "scripts": {
+  "test": "jest --collectCoverage --runInBand",
+  "testing": "jest --watch --collectCoverage --runInBand",
+  "mutation": "npx stryker run",
+  "docs": "docs",
+  "patch": "git push && npm version patch && npm publish",
+  "minor": "git push && npm version minor && npm publish",
+  "major": "git push && npm version major && npm publish"
+ },
+ "bin": {
+  "initammend": "bin/initammend",
+  "init": "bin/init"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/danielcobo/init.git"
+ },
+ "keywords": [
+  "npm",
+  "init"
+ ],
+ "author": "Daniel Cobo (danielcobo.com)",
+ "license": "MIT",
+ "bugs": {
+  "url": "https://github.com/danielcobo/init/issues"
+ },
+ "homepage": "https://github.com/danielcobo/init#readme",
+ "dependencies": {
+  "@danielcobo/err": "^1.0.1",
+  "@danielcobo/fs": "^1.2.2",
+  "inquirer": "^8.2.0"
+ },
+ "devDependencies": {
+  "@danielcobo/docs": "^1.0.11",
+  "@stryker-mutator/core": "^5.4.1",
+  "@stryker-mutator/jest-runner": "^5.4.1",
+  "jest": "^27.3.1"
+ }
+}

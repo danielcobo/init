@@ -1,0 +1,30 @@
+#! /usr/bin/env node
+const path = require('path');
+const forBrowser = require('../src/forBrowser');
+const copyBoilerplate = require('../src/copyBoilerplate');
+const makeFolders = require('../src/makeFolders');
+const ammendPackage = require('../src/ammendPackage');
+const absoluteCurrentPath = process.cwd();
+const err = require('@danielcobo/err');
+const chalk = require('chalk');
+
+(async function () {
+  console.log('Preparing module for development..');
+
+  const browserModule = await forBrowser().catch(
+    err('Could not decide if browser or NodeJS module.')
+  );
+  await copyBoilerplate(
+    browserModule,
+    path.join(__dirname, '../boilerplate'),
+    absoluteCurrentPath
+  ).catch(err('Could not copy boilerplates.'));
+  await makeFolders(browserModule, absoluteCurrentPath).catch(
+    err('Could not make folders')
+  );
+  await ammendPackage(browserModule, absoluteCurrentPath).catch(
+    err('Could not ammend package.json')
+  );
+
+  console.log(chalk.green('Done. Module ready for development.'));
+})();
