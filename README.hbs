@@ -1,6 +1,6 @@
-# init
+# {{noscope repo.name}}
 
-A more complete npm init
+{{repo.description}}
 
 ## 🧭 Table of contents
 
@@ -30,7 +30,7 @@ To use this package you will need:
 ### Install
 
 ```cli
-npm install -g @danielcobo/init
+npm install -g {{repo.name}}
 ```
 
 <sub>**Note:** In case you're wondering, **@danielcobo/** is just a [namespace scope](https://docs.npmjs.com/about-scopes/) - an NPM feature. Scopes make it easier to name modules and improve [security](https://github.blog/2021-02-12-avoiding-npm-substitution-attacks/).</sub>
@@ -38,7 +38,7 @@ npm install -g @danielcobo/init
 ### Require the module
 
 ```js
-const init = require('@danielcobo/init');
+const {{noscope repo.name}} = require('{{repo.name}}');
 ```
 
 ### Example use
@@ -53,7 +53,7 @@ Follow the prompts to set up the package.
 
 ## 🆘 Troubleshooting
 
-If you run into trouble or have questions just [submit an issue](https://github.com/danielcobo/init/issues).
+If you run into trouble or have questions just [submit an issue]({{nogit repo.repository.url}}/issues).
 
 ## 🤝 Contributing
 
@@ -99,4 +99,4 @@ If you intend to develop further or contribute code, then please ensure to write
 
 ## ⚖️ License
 
-[MIT License](https://github.com/danielcobo/init/blob/master/LICENSE.md)
+[MIT License]({{nogit repo.repository.url}}/blob/master/LICENSE.md)
