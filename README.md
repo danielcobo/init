@@ -7,7 +7,6 @@ A more complete npm init
 - [✨ Benefits](#-benefits)
 - [🎒 Requierments](#-requierments)
 - [🚀 Quickstart](#-quickstart)
-- [📘 Documentation](#-documentation)
 - [🆘 Troubleshooting](#-troubleshooting)
 - [🤝 Contributing](#-contributing)
 - [🧪 Testing](#-testing)
@@ -35,12 +34,6 @@ npm install -g @danielcobo/init
 
 <sub>**Note:** In case you're wondering, **@danielcobo/** is just a [namespace scope](https://docs.npmjs.com/about-scopes/) - an NPM feature. Scopes make it easier to name modules and improve [security](https://github.blog/2021-02-12-avoiding-npm-substitution-attacks/).</sub>
 
-### Require the module
-
-```js
-const init = require('@danielcobo/init');
-```
-
 ### Example use
 
 In the terminal run:
@@ -50,6 +43,8 @@ init
 ```
 
 Follow the prompts to set up the package.
+
+That's it. Go build something amazing 😄.
 
 ## 🆘 Troubleshooting
 
