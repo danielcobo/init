@@ -1,1 +1,1 @@
-npm init && initammend && npm install -D && npm run docs
+npm init && initammend && npm install -D && npm update -D && npm run docs
