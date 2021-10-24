@@ -13,7 +13,7 @@ module.exports = async function ammendPackage(browserModule, destinationPath) {
   const pkg = JSON.parse(pkgTxt);
 
   pkg.devDependencies = {
-    '@danielcobo/docs': '^1.0.14',
+    '@danielcobo/docs': '^1.0.16',
     jest: '^27.2.5',
     '@stryker-mutator/core': '^5.4.1',
     '@stryker-mutator/jest-runner': '^5.4.1',
