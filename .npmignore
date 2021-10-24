@@ -1,6 +1,0 @@
-*.test.js
-*.log
-*.md
-coverage
-reports
-stryker.conf.json
