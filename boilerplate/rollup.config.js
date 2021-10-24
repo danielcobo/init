@@ -6,8 +6,8 @@ const newOutput = function newOutput(format) {
   return {
     input: './src/index.js',
     output: {
-      name: 'typeOf',
-      file: './dist/' + format + '/typeof.min.js',
+      name: 'bundle',
+      file: './dist/' + format + '/bundle.min.js',
       format: format,
       preferConst: true,
     },
