@@ -1,6 +1,6 @@
 {
  "name": "@danielcobo/init",
- "version": "1.0.10",
+ "version": "1.0.11",
  "description": "A more complete npm init",
  "main": "index.js",
  "scripts": {
