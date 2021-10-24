@@ -26,7 +26,11 @@ module.exports = async function copyBoilerplate(
       .map(async function (filename) {
         const file = path.join(sourcePath, filename);
         const destination = path.join(destinationPath, filename);
-        return await fs.clone(file, destination, { overwrite: false });
+        return await fs
+          .clone(file, destination, { overwrite: false })
+          .then(function () {
+            console.log(`${filename} copied`);
+          });
       })
   );
 };
