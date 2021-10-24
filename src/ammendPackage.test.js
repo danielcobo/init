@@ -14,7 +14,7 @@ test('Test ammendPackage.js - browser module', async function () {
   const pkg = JSON.parse(await fs.read('./testdir/package.json'));
 
   expect(pkg.devDependencies).toStrictEqual({
-    '@danielcobo/docs': '^1.0.9',
+    '@danielcobo/docs': '^1.0.16',
     jest: '^27.2.5',
     '@stryker-mutator/core': '^5.4.1',
     '@stryker-mutator/jest-runner': '^5.4.1',
@@ -41,7 +41,7 @@ test('Test ammendPackage.js - NodeJS module', async function () {
   const pkg = JSON.parse(await fs.read('./testdir/package.json'));
 
   expect(pkg.devDependencies).toStrictEqual({
-    '@danielcobo/docs': '^1.0.9',
+    '@danielcobo/docs': '^1.0.16',
     jest: '^27.2.5',
     '@stryker-mutator/core': '^5.4.1',
     '@stryker-mutator/jest-runner': '^5.4.1',
