@@ -24,10 +24,11 @@ module.exports = async function copyBoilerplate(
         }
       })
       .map(async function (filename) {
-        const file = path.join(sourcePath, filename);
-        const destination = path.join(destinationPath, filename);
+        const source = path.join(sourcePath, filename);
+        const file = filename.replace('__', '.');
+        const destination = path.join(destinationPath, file);
         return await fs
-          .clone(file, destination, { overwrite: false })
+          .clone(source, destination, { overwrite: false })
           .then(function () {
             console.log(`${filename} copied`);
           });
