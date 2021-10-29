@@ -14,7 +14,7 @@
  },
  "bin": {
   "initammend": "bin/initammend",
-  "init": "bin/init"
+  "init": "bin/init.cmd"
  },
  "repository": {
   "type": "git",
