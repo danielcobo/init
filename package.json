@@ -36,7 +36,7 @@
   "inquirer": "^8.2.0"
  },
  "devDependencies": {
-  "@danielcobo/docs": "^1.0.17",
+  "@danielcobo/docs": "^1.0.18",
   "@stryker-mutator/core": "^5.4.1",
   "@stryker-mutator/jest-runner": "^5.4.1",
   "jest": "^27.3.1"
