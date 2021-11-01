@@ -31,13 +31,13 @@
  },
  "homepage": "https://github.com/danielcobo/init#readme",
  "dependencies": {
-  "@danielcobo/err": "^1.0.9",
+  "@danielcobo/err": "^1.0.10",
   "@danielcobo/fs": "^1.2.2",
   "chalk": "^4.1.2",
   "inquirer": "^8.2.0"
  },
  "devDependencies": {
-  "@danielcobo/docs": "^1.0.18",
+  "@danielcobo/docs": "^1.0.19",
   "@stryker-mutator/core": "^5.4.1",
   "@stryker-mutator/jest-runner": "^5.4.1",
   "jest": "^27.3.1"
