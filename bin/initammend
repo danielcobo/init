@@ -12,7 +12,7 @@ const chalk = require('chalk');
   console.log('Preparing module for development..');
 
   const browserModule = await forBrowser().catch(
-    err('Could not decide if browser or NodeJS module.')
+    err(chalk.red('Could not decide if browser or NodeJS module.'))
   );
   await copyBoilerplate(
     browserModule,
