@@ -1,13 +1,17 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import { readFile } from 'fs/promises';
 
-const newOutput = function newOutput(format) {
+const newOutput = async function newOutput(format) {
+  const pkgTxt = await readFile('./package.json', 'utf8');
+  const pkg = JSON.parse(pkgTxt);
+  const packageName = pkg.name.replace(/^.+\//, '');
   return {
     input: './src/index.js',
     output: {
-      name: 'bundle',
-      file: './dist/' + format + '/bundle.min.js',
+      name: packageName,
+      file: `./dist/${format}/${packageName}.min.js`,
       format: format,
       preferConst: true,
     },
@@ -21,4 +25,4 @@ const newOutput = function newOutput(format) {
   };
 };
 
-export default [newOutput('iife'), newOutput('esm')];
+export default Promise.all([newOutput('iife'), newOutput('esm')]);

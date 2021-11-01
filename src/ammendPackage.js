@@ -35,6 +35,7 @@ module.exports = async function ammendPackage(browserModule, destinationPath) {
     patch: 'git push && npm version patch && npm publish',
     minor: 'git push && npm version minor && npm publish',
     major: 'git push && npm version major && npm publish',
+    rollup: './node_modules/.bin/rollup -c',
   };
   if (browserModule) {
     pkg.scripts.prepublishOnly = './node_modules/.bin/rollup -c';
