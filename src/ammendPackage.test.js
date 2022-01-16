@@ -32,6 +32,7 @@ test('Test ammendPackage.js - browser module', async function () {
     patch: 'git push && npm version patch && npm publish',
     minor: 'git push && npm version minor && npm publish',
     major: 'git push && npm version major && npm publish',
+    rollup: './node_modules/.bin/rollup -c',
     prepublishOnly: './node_modules/.bin/rollup -c',
   });
 });
@@ -55,5 +56,6 @@ test('Test ammendPackage.js - NodeJS module', async function () {
     patch: 'git push && npm version patch && npm publish',
     minor: 'git push && npm version minor && npm publish',
     major: 'git push && npm version major && npm publish',
+    rollup: './node_modules/.bin/rollup -c',
   });
 });
